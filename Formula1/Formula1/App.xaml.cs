@@ -11,7 +11,10 @@ namespace Formula1
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new DriversView());
+            MainPage = new NavigationPage(new DriversView(new ViewModel.DriversViewModel())) { 
+                BarBackgroundColor = Color.FromHex("#9E4368"),
+                BarTextColor = Color.White
+            };
         }
 
         protected override void OnStart()

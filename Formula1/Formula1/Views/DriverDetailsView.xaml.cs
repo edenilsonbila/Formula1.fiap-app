@@ -1,4 +1,5 @@
 ﻿using Formula1.Models;
+using Formula1.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,11 @@ namespace Formula1.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DriverDetailsView : ContentPage
     {
-        public DriverDetailsView(Driver model)
+        public DriverDetailsView(DriverDetailsViewModel model)
         {
             InitializeComponent();
 
-            this.BindingContext = model;
+            BindingContext = model;
         }
     }
 }
